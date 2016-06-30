@@ -80,5 +80,13 @@
 				</manifest>
 			</jar>
 		</target>
+	<target name="run" depends="jar">
+	        <echo message="Attempting to run!" />
+	        <java jar="build/jar/point2d.jar" output="results.txt" fork="true" >
+	    		<arg value="point2d" />	
+				<arg value="40" />
+				<arg value="2" />
+	    	</java>
+	    </target>
 
 </project>
